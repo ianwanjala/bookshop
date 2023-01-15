@@ -1,13 +1,25 @@
-<h1> BookShop 2022 books </h2>
-{%if customer_list%}
+<h1> BookShop 2022 books </h2>        
+
+<h2> Customer list </h2>
 <ul>
-	{%for customer in customer_list%}
-	<li>
-		<a href="/customer/{{customer.id}}/">{{customer.name}}</a>
-	</li>
+	{%for customer in index_list%}
+	<p> {{customer}}</p>
+
+	
 	{% endfor%}
 </ul>
-{% else %}
-<p> No Customer available in the inventory </p>
-{% endif %}
+<br>
+<h2> book list </h2>
+<ul>
+	{%for books in book_list%}
+	<p> {{books.title}}</p>
+	{% endfor%}
+</ul>
 
+<br>
+<h2> Address list</h2>
+<ul>
+	{%for address in address_list%}
+	<p> {{address.town}}</p>
+	{% endfor%}
+</ul
